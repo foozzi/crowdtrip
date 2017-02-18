@@ -18,15 +18,14 @@ class RegisterForm(forms.ModelForm):
 		password_again = self.cleaned_data.get('password_again')
 
 		if password != password_again:
-			raise forms.ValidationError('Password is not identical')
+			raise forms.ValidationError('Password is not identical', code='password', params={'value':'password'})
 
+		if User.objects.filter(username=username).exists():
+			raise forms.ValidationError('username existing, please login', code='username')
 
-		if not User.username_present(self.cleaned_data.get('username')) == True:
-			raise forms.ValidationError('username existing, please login')			
-
-		if not User.email_present(self.cleaned_data.get('email')) == True:
-			raise form.ValidationError('email existing, please login')
-
+		if User.objects.filter(email=email).exists() == False:
+			raise forms.ValidationError('email existing, please login', code='email')
+			
 		return self.cleaned_data
 
 	def save(self, commit=True):
@@ -36,3 +35,11 @@ class RegisterForm(forms.ModelForm):
 		if commit:
 			user.save()
 			return user.confirm_key, user
+
+class LoginForm(forms.ModelForm):
+	username = forms.CharField(label='Your name', max_length=100, min_length=3)
+	password = forms.CharField(label='Your password', widget=forms.PasswordInput(), max_length=100, min_length=6)
+
+	class Meta:
+		model = User
+		fields = ['password', 'username']

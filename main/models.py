@@ -1,7 +1,11 @@
+from django.contrib.auth.models import (AbstractBaseUser, PermissionsMixin,
+										BaseUserManager)
+from django.core.mail import send_mail
+from django.core import validators
 from django.db import models
 from django.utils import timezone
-from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
 from django.utils.crypto import get_random_string
+
 import hashlib
 
 class UserAccountManager(BaseUserManager):
@@ -28,41 +32,44 @@ class UserAccountManager(BaseUserManager):
 
 class User(AbstractBaseUser, PermissionsMixin):
 	objects = UserAccountManager()
-
-	"db map"
-	email = models.EmailField(unique=True, db_index=True)
-	joined = models.DateTimeField(auto_now_add=True)
-	username = models.CharField(unique=True, max_length=100)
-	first_name = models.CharField(max_length=100, default=None)
-	last_name = models.CharField(max_length=100, default=None)
-	confirm_key = models.CharField(max_length=155, unique=True)
-	is_active = models.BooleanField(default=False)
-	is_admin = models.BooleanField(default=False)
+	
+	username = models.CharField(max_length=30, unique=True)
+	first_name = models.CharField(max_length=100)
+	last_name = models.CharField(max_length=100)
+	email = models.EmailField(max_length=254, unique=True)
 	is_staff = models.BooleanField(default=False)
-	is_superuser = models.BooleanField(default=False)
+	is_active = models.BooleanField(default=True)
+	date_joined = models.DateTimeField(default=timezone.now)
+	confirm_key = models.CharField(max_length=254, unique=True)
 
-	USERNAME_FIELD = 'email'
+	USERNAME_FIELD = 'username'
+	REQUIRED_FIELDS = ['email']
+
+	class Meta:
+		verbose_name = 'user'
+		verbose_name_plural = 'users'
 
 	def __unicode__(self):
 		return self.email
-
-	def username_present(username):
-		if User.objects.filter(username=username).exists() == False:
-			return True
-
-		return False
-
-	def email_present(email):
-		if User.objects.filter(email=email).exists() == False:
-			return True
-
-		return False
 
 	def generate_activation_key(email):
 		chars = 'abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(-_=+)'
 		secret_key = get_random_string(20, chars)
 		return hashlib.sha256((secret_key + email).encode('utf-8')).hexdigest()
 
+	def get_full_name(self):
+		"""
+		Returns the first_name plus the last_name, with a space in between.
+		"""
+		full_name = self.first_name + ' ' + self.last_name
+		return full_name.strip()
+
 	def get_short_name(self):
 		"Returns the short name for the user."
-		return self.email
+		return self.username.strip()
+
+	def email_user(self, subject, message, from_email=None):
+		"""
+		Sends an email to this User.
+		"""
+		send_mail(subject, message, from_email, [self.email])
