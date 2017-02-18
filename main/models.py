@@ -29,12 +29,13 @@ class UserAccountManager(BaseUserManager):
 class User(AbstractBaseUser, PermissionsMixin):
 	objects = UserAccountManager()
 
-	email = models.EmailField('email address', unique=True, db_index=True)
+	"db map"
+	email = models.EmailField(unique=True, db_index=True)
 	joined = models.DateTimeField(auto_now_add=True)
-	username = models.CharField('username', unique=True, max_length=100)
-	first_name = models.CharField('first name', max_length=100, default=None)
-	last_name = models.CharField('last name', max_length=100, default=None)
-	confirm_key = models.CharField('confirm key', max_length=155, unique=True)
+	username = models.CharField(unique=True, max_length=100)
+	first_name = models.CharField(max_length=100, default=None)
+	last_name = models.CharField(max_length=100, default=None)
+	confirm_key = models.CharField(max_length=155, unique=True)
 	is_active = models.BooleanField(default=False)
 	is_admin = models.BooleanField(default=False)
 	is_staff = models.BooleanField(default=False)
@@ -46,13 +47,13 @@ class User(AbstractBaseUser, PermissionsMixin):
 		return self.email
 
 	def username_present(username):
-		if User.objects.filter(username=username).exists():
+		if User.objects.filter(username=username).exists() == False:
 			return True
 
 		return False
 
 	def email_present(email):
-		if User.objects.filter(email=email).exists():
+		if User.objects.filter(email=email).exists() == False:
 			return True
 
 		return False

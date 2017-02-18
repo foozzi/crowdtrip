@@ -20,9 +20,12 @@ class RegisterForm(forms.ModelForm):
 		if password != password_again:
 			raise forms.ValidationError('Password is not identical')
 
-		#todo
-		#if not (User.username_present(self.cleaned_data['username']) == True or User.email_present(self.cleaned_data['email']) == True):
-		#	raise forms.ValidationError('User existing, please login')
+
+		if not User.username_present(self.cleaned_data.get('username')) == True:
+			raise forms.ValidationError('username existing, please login')			
+
+		if not User.email_present(self.cleaned_data.get('email')) == True:
+			raise form.ValidationError('email existing, please login')
 
 		return self.cleaned_data
 

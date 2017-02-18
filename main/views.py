@@ -5,10 +5,12 @@ from django.contrib import messages
 from django.contrib.auth.models import User
 from .forms import RegisterForm
 from django.core.mail import send_mail
+from django.core.validators import validate_email
 
 def index(request):
-	if request.method == 'POST':
+	if request.method == 'POST':		
 		form = RegisterForm(request.POST)
+		
 		if form.is_valid():
 			confirm_key, email = form.save()
 		
