@@ -23,13 +23,14 @@ def register(request):
 		if form.is_valid():
 			confirm_key, email = form.save()
 		
-			send_mail(
+			s = send_mail(
 			    'Confirmation register in CrowdTrip',
 			    'You key: ' + confirm_key,
 			    'info@crowdtrip.com',
 			    [email],
 			    fail_silently=False,
 			)
+			print(s)
 		else:
 			return JsonResponse({
 				'success':False,
@@ -40,6 +41,9 @@ def register(request):
 		'success':True,
 		'errors': None
 	})
+
+def activate(request):
+	print('ss')
 
 def login(request):
 	if request.method == 'POST':
@@ -55,7 +59,7 @@ def login(request):
 				return JsonResponse({'errors':'Invalid credentials'})
 		else:
 			return JsonResponse({
-				'success':False
+				'success':False,
 				'errors':dict(ast.literal_eval(form.errors.as_json()))
 			})
 

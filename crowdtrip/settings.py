@@ -27,22 +27,23 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-STATIC_ROOT = '/home/foozzi/projects/web_env/crowdtrip/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Application definition
 
 INSTALLED_APPS = [
-    'main.apps.MainConfig',
+    'account.apps.AccountConfig',
+    'dashboard.apps.DashboardConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    #'django.contrib.staticfiles', uncomment if prod.
+    'django.contrib.staticfiles',
     'widget_tweaks'
 ]
 
-AUTH_USER_MODEL = 'main.User'
+AUTH_USER_MODEL = 'account.User'
 
 #email settings
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'

@@ -20,10 +20,10 @@ class RegisterForm(forms.ModelForm):
 		if password != password_again:
 			raise forms.ValidationError('Password is not identical', code='password', params={'value':'password'})
 
-		if User.objects.filter(username=username).exists():
+		if User.objects.filter(username=self.cleaned_data.get('username')).exists():
 			raise forms.ValidationError('username existing, please login', code='username')
 
-		if User.objects.filter(email=email).exists() == False:
+		if User.objects.filter(email=self.cleaned_data.get('email')).exists():
 			raise forms.ValidationError('email existing, please login', code='email')
 			
 		return self.cleaned_data
@@ -32,6 +32,7 @@ class RegisterForm(forms.ModelForm):
 		user = super(RegisterForm, self).save(commit=False)
 		user.set_password(self.cleaned_data['password'])
 		user.confirm_key = User.generate_activation_key(self.cleaned_data['email'])
+		user.is_active = False
 		if commit:
 			user.save()
 			return user.confirm_key, user

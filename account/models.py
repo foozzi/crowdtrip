@@ -15,6 +15,7 @@ class UserAccountManager(BaseUserManager):
 			raise ValueError('Email must be set!')
 		user = self.model(email=email)
 		user.set_password(password)
+		user.is_active = False
 		user.save(using=self._db)
 		return user
 
@@ -23,7 +24,6 @@ class UserAccountManager(BaseUserManager):
 		user.is_admin = True
 		user.is_staff = True
 		user.is_active = True
-		user.is_superuser = True
 		user.save(using=self._db)
 		return user
 
