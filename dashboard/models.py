@@ -1,3 +1,6 @@
 from django.db import models
+from django.utils import timezone
 
-# Create your models here.
+class Profile():
+	def edit_profile(self):
+		""" @TODO """

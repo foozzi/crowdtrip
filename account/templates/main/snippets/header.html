@@ -119,11 +119,11 @@
                   </form>
                 </div>
               </li>
-              <li><a href="#" class="btn btn-4 blue">Join</a></li>
+              <li><a href="/register" class="btn btn-4 blue">Join</a></li>
               {% else %}
               <li>Hi! {{ request.user.first_name }} {{ request.user.last_name }}</li>
               &nbsp;
-              <li><a href="#" class="btn btn-4 blue">Dashboard</a></li>
+              <li><a href="/dashboard" class="btn btn-4 blue">Dashboard</a></li>
               {% endif %}
             </ul>
           </div>

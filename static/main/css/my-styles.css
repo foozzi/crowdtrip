@@ -4,3 +4,9 @@
 .center {
 	text-align: center;
 }
+h1.avatar {
+	margin-top: 5px;
+}
+h1.avatar img {
+	border-radius: 70px;
+}
