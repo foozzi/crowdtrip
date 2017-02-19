@@ -1,7 +1,5 @@
 from django.contrib.auth.models import (AbstractBaseUser, PermissionsMixin,
 										BaseUserManager)
-from django.core.mail import send_mail
-from django.core import validators
 from django.db import models
 from django.utils import timezone
 from django.utils.crypto import get_random_string
@@ -67,9 +65,3 @@ class User(AbstractBaseUser, PermissionsMixin):
 	def get_short_name(self):
 		"Returns the short name for the user."
 		return self.username.strip()
-
-	def email_user(self, subject, message, from_email=None):
-		"""
-		Sends an email to this User.
-		"""
-		send_mail(subject, message, from_email, [self.email])
