@@ -2,5 +2,5 @@ from django.conf.urls import url
 from . import views
 
 urlpatterns = [
-    url(r'^dash$', views.index, name='dash'),
+    url(r'^dashboard$', views.index, name='dashboard'),
 ]

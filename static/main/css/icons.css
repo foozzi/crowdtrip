@@ -1,0 +1,140 @@
+@font-face {
+	font-family: 'icomoon';
+	src:url('../fonts/icomoon.eot?4lqtcs');
+	src:url('../fonts/icomoon.eot?#iefix4lqtcs') format('embedded-opentype'),
+		url('../fonts/icomoon.woff?4lqtcs') format('woff'),
+		url('../fonts/icomoon.ttf?4lqtcs') format('truetype'),
+		url('../fonts/icomoon.svg?4lqtcs#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-animals:before {
+	content: "\e600";
+}
+
+.icon-art:before {
+	content: "\e601";
+}
+
+.icon-bakers:before {
+	content: "\e602";
+}
+
+.icon-business:before {
+	content: "\e603";
+}
+
+.icon-comic:before {
+	content: "\e604";
+}
+
+.icon-community:before {
+	content: "\e605";
+}
+
+.icon-dance:before {
+	content: "\e606";
+}
+
+.icon-design:before {
+	content: "\e607";
+}
+
+.icon-education:before {
+	content: "\e608";
+}
+
+.icon-environment:before {
+	content: "\e609";
+}
+
+.icon-fashion:before {
+	content: "\e60a";
+}
+
+.icon-film:before {
+	content: "\e60b";
+}
+
+.icon-food:before {
+	content: "\e60c";
+}
+
+.icon-gaming:before {
+	content: "\e60d";
+}
+
+.icon-health:before {
+	content: "\e60e";
+}
+
+.icon-music:before {
+	content: "\e60f";
+}
+
+.icon-photography:before {
+	content: "\e610";
+}
+
+.icon-politics:before {
+	content: "\e611";
+}
+
+.icon-religion:before {
+	content: "\e612";
+}
+
+.icon-sports:before {
+	content: "\e613";
+}
+
+.icon-technology:before {
+	content: "\e614";
+}
+
+.icon-theater:before {
+	content: "\e615";
+}
+
+.icon-transmedia:before {
+	content: "\e616";
+}
+
+.icon-video-web:before {
+	content: "\e617";
+}
+
+.icon-writing:before {
+	content: "\e618";
+}
+
+.icon-search-projects:before {
+	content: "\e619";
+}
+
+.icon-ideas:before {
+	content: "\e61a";
+}
+
+.icon-community2:before {
+	content: "\e61b";
+}
+
+.icon-publicpower:before {
+	content: "\e61c";
+}

@@ -1,371 +1,478 @@
 
-<!DOCTYPE html>
-<html lang="en"><head>
-  <meta charset="utf-8">
-  <title>Snow Landing Page Theme | Created By Visual Soldiers</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+{% include "main/snippets/header.html" %}  
   
-  <meta property="og:title" content="">
-	<meta property="og:type" content="website">
-	<meta property="og:url" content="">
-	<meta property="og:site_name" content="">
-	<meta property="og:description" content="">
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="/static/main/css/font-awesome.min.css">
-  <link rel="stylesheet" href="/static/main/css/animate.css">
-  <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900|Montserrat:400,700' rel='stylesheet' type='text/css'>
-  
-
-  <link rel="stylesheet" href="/static/main/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/static/main/css/main.css">
-
-  <script src="/static/main/js/modernizr-2.7.1.js"></script>
-  
-</head>
-
-<body>
-
-    
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="logo" href="index.html"><img src="/static/main/img/logo.svg" alt="Logo"></a>
-        </div>
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="#pricing" class="scroll">Pricing</a></li>
-            {% if not request.user.is_active %}
-            <li><a data-toggle="modal" data-target="#myModal" href="#">Sign in</a></li>
-            {% else %}
-            <li><a href="/dash">My dashboard</a></li>
-            {% endif %}
+  <!-- Revolution Slider -->
+  <section class="main-slider">
+    <article>
+      <div class="tp-banner-container">
+        <div class="tp-banner" >
+          <ul>
+            <!-- SLIDE 1 -->
+            <li data-transition="fade" data-slotamount="7" data-masterspeed="500"  data-saveperformance="on"  data-title="PARK AT BIRDCAGE WALK">
+              <!-- MAIN IMAGE -->
+              <img src="/static/main/images/dummy.png"  alt="slidebg1" data-lazyload="/static/main/images/slide-1.jpg" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+              <!-- LAYERS -->
+            
+              <div class="tp-caption style_h_2 customin tp-resizeme rs-parallaxlevel-0"
+                data-x="503"
+                data-y="160" 
+                data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
+                data-speed="500"
+                data-start="2350"
+                data-easing="Back.easeOut"
+                data-splitin="none"
+                data-splitout="none"
+                data-elementdelay="0.1"
+                data-endelementdelay="0.1"
+                style="z-index: 2; max-width: auto; max-height: auto; white-space: nowrap;">PARK AT
+              </div>
+            
+              <div class="tp-caption style_h_1 skewfromrightshort tp-resizeme rs-parallaxlevel-0"
+                data-x="390"
+                data-y="221" 
+                data-speed="500"
+                data-start="2250"
+                data-easing="Power3.easeInOut"
+                data-splitin="chars"
+                data-splitout="none"
+                data-elementdelay="0.1"
+                data-endelementdelay="0.1"
+                style="z-index: 3; max-width: auto; max-height: auto; white-space: nowrap;">BIRDCAGE WALK
+              </div>
+            
+              <div class="tp-caption style_p_1 customin tp-resizeme rs-parallaxlevel-0"
+                data-x="140"
+                data-y="300" 
+                data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                data-speed="500"
+                data-start="2600"
+                data-easing="Power3.easeInOut"
+                data-splitin="none"
+                data-splitout="none"
+                data-elementdelay="0.05"
+                data-endelementdelay="0.1"
+                style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;">
+                  <div style="text-align:center;">Pellentesque pharetra sapien non quam placerat vestibulum. Aliquam dignissim ex nec feugiat condimentum. Sed iaculis magna mi, sed semper<br />ex semper eu. Etiam sagittis ante eget nisi tempus, elementum sollicitudin nulla lacinia. Aenean sed odio ipsum. Nam tincidunt bibendum quam, <br />sed ultricies nisl tristique eget. Vestibulum auctor mi sed sapien hendrerit, et auctor nulla egestas. Maecenas facilisis sollicitudin magna at fringilla.</div>
+                </div>
+                
+                <div class="tp-caption customin tp-resizeme rs-parallaxlevel-0 slider-progress-section"
+                data-x="109"
+                data-y="395" 
+                data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                data-speed="500"
+                data-start="2900"
+                data-easing="Power3.easeInOut"
+                data-splitin="none"
+                data-splitout="none"
+                data-elementdelay="0.1"
+                data-endelementdelay="0.1"
+                data-linktoslide="next"
+                style="z-index: 5; max-width: auto; max-height: auto; white-space: nowrap;">
+                  <div class="progress-section">
+                    <div class="pie_progress" role="progressbar" data-goal="75" data-barcolor="#32cc98" data-barsize="9.1" data-size="148" style="width:148px; margin:0px 106px; float: left;">
+                      <div class="pie_progress__number">0%</div>
+                      <div class="pie_progress__label">Completed</div>
+                    </div>
+                    <ul>
+                      <li>12<span>Days Left</span></li>
+                      <li>175<span>Backers</span></li>
+                      <li class="last">R$7.000,00<span>Funded</span></li>
+                    </ul>
+                    <div class="clear"></div>
+                  </div>
+                </div>
+                
+                <div class="tp-caption lft customout rs-parallaxlevel-0"
+          data-x="108"
+          data-y="395" 
+          data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+          data-speed="700"
+          data-start="2900"
+          data-easing="Power3.easeInOut"
+          data-elementdelay="0.1"
+          data-endelementdelay="0.1"
+          style="z-index: 6;"><img src="/static/main/images/dummy.png" alt="" data-lazyload="/static/main/images/funder_3.jpg"  class="funder-img"> </div>
+            </li>
+          
+            <!-- SLIDE 2 -->
+            <li data-transition="fade" data-slotamount="7" data-masterspeed="500"  data-saveperformance="on"  data-title="PARK AT BIRDCAGE WALK">
+              <!-- MAIN IMAGE -->
+              <img src="/static/main/images/dummy.png"  alt="slidebg1" data-lazyload="/static/main/images/slide-2.jpg" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+              <!-- LAYERS -->
+            
+              <div class="tp-caption style_h_2 customin tp-resizeme rs-parallaxlevel-0"
+                data-x="545"
+                data-y="160" 
+                data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
+                data-speed="500"
+                data-start="2350"
+                data-easing="Back.easeOut"
+                data-splitin="none"
+                data-splitout="none"
+                data-elementdelay="0.1"
+                data-endelementdelay="0.1"
+                style="z-index: 2; max-width: auto; max-height: auto; white-space: nowrap;">SAVE
+              </div>
+            
+              <div class="tp-caption style_h_1 skewfromrightshort tp-resizeme rs-parallaxlevel-0"
+                data-x="460"
+                data-y="221" 
+                data-speed="500"
+                data-start="2250"
+                data-easing="Power3.easeInOut"
+                data-splitin="chars"
+                data-splitout="none"
+                data-elementdelay="0.1"
+                data-endelementdelay="0.1"
+                style="z-index: 3; max-width: auto; max-height: auto; white-space: nowrap;">THE NATURE
+              </div>
+            
+              <div class="tp-caption style_p_1 customin tp-resizeme rs-parallaxlevel-0"
+                data-x="140"
+                data-y="300" 
+                data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                data-speed="500"
+                data-start="2600"
+                data-easing="Power3.easeInOut"
+                data-splitin="none"
+                data-splitout="none"
+                data-elementdelay="0.05"
+                data-endelementdelay="0.1"
+                style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;">
+                  <div style="text-align:center;">Pellentesque pharetra sapien non quam placerat vestibulum. Aliquam dignissim ex nec feugiat condimentum. Sed iaculis magna mi, sed semper<br />ex semper eu. Etiam sagittis ante eget nisi tempus, elementum sollicitudin nulla lacinia. Aenean sed odio ipsum. Nam tincidunt bibendum quam, <br />sed ultricies nisl tristique eget. Vestibulum auctor mi sed sapien hendrerit, et auctor nulla egestas. Maecenas facilisis sollicitudin magna at fringilla.</div>
+                </div>
+                                          
+                <div class="tp-caption customin tp-resizeme rs-parallaxlevel-0 slider-progress-section"
+                data-x="109"
+                data-y="395" 
+                data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                data-speed="500"
+                data-start="2900"
+                data-easing="Power3.easeInOut"
+                data-splitin="none"
+                data-splitout="none"
+                data-elementdelay="0.1"
+                data-endelementdelay="0.1"
+                data-linktoslide="next"
+                style="z-index: 5; max-width: auto; max-height: auto; white-space: nowrap;">
+                  <div class="progress-section">
+                    <div class="pie_progress" role="progressbar" data-goal="80" data-barcolor="#f2d031" data-barsize="9.1" data-size="148" style="width:148px; margin:0px 106px; float: left;">
+                      <div class="pie_progress__number">0%</div>
+                      <div class="pie_progress__label">Completed</div>
+                    </div>
+                    <ul>
+                      <li>12<span>Days Left</span></li>
+                      <li>175<span>Backers</span></li>
+                      <li class="last">R$7.000,00<span>Funded</span></li>
+                    </ul>
+                    <div class="clear"></div>
+                  </div>
+                </div>
+                
+                <div class="tp-caption lft customout rs-parallaxlevel-0"
+          data-x="108"
+          data-y="395" 
+          data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+          data-speed="700"
+          data-start="2900"
+          data-easing="Power3.easeInOut"
+          data-elementdelay="0.1"
+          data-endelementdelay="0.1"
+          style="z-index: 6;"><img src="/static/main/images/dummy.png" alt="" data-lazyload="/static/main/images/funder_1.jpg"  class="funder-img"> </div>
+            </li>
+            
+            <!-- SLIDE 3 -->
+            <li data-transition="fade" data-slotamount="7" data-masterspeed="500"  data-saveperformance="on"  data-title="PARK AT BIRDCAGE WALK">
+              <!-- MAIN IMAGE -->
+              <img src="/static/main/images/dummy.png"  alt="slidebg1" data-lazyload="/static/main/images/slide-4.jpg" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+              <!-- LAYERS -->
+            
+              <div class="tp-caption style_h_2 customin tp-resizeme rs-parallaxlevel-0"
+                data-x="503"
+                data-y="160" 
+                data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
+                data-speed="500"
+                data-start="2350"
+                data-easing="Back.easeOut"
+                data-splitin="none"
+                data-splitout="none"
+                data-elementdelay="0.1"
+                data-endelementdelay="0.1"
+                style="z-index: 2; max-width: auto; max-height: auto; white-space: nowrap;">FOOD
+              </div>
+            
+              <div class="tp-caption style_h_1 skewfromrightshort tp-resizeme rs-parallaxlevel-0"
+                data-x="390"
+                data-y="221" 
+                data-speed="500"
+                data-start="2250"
+                data-easing="Power3.easeInOut"
+                data-splitin="chars"
+                data-splitout="none"
+                data-elementdelay="0.1"
+                data-endelementdelay="0.1"
+                style="z-index: 3; max-width: auto; max-height: auto; white-space: nowrap;">FOR HOMELESS
+              </div>
+            
+              <div class="tp-caption style_p_1 customin tp-resizeme rs-parallaxlevel-0"
+                data-x="140"
+                data-y="300" 
+                data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                data-speed="500"
+                data-start="2600"
+                data-easing="Power3.easeInOut"
+                data-splitin="none"
+                data-splitout="none"
+                data-elementdelay="0.05"
+                data-endelementdelay="0.1"
+                style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;">
+                  <div style="text-align:center;">Pellentesque pharetra sapien non quam placerat vestibulum. Aliquam dignissim ex nec feugiat condimentum. Sed iaculis magna mi, sed semper<br />ex semper eu. Etiam sagittis ante eget nisi tempus, elementum sollicitudin nulla lacinia. Aenean sed odio ipsum. Nam tincidunt bibendum quam, <br />sed ultricies nisl tristique eget. Vestibulum auctor mi sed sapien hendrerit, et auctor nulla egestas. Maecenas facilisis sollicitudin magna at fringilla.</div>
+                </div>
+                
+                <div class="tp-caption customin tp-resizeme rs-parallaxlevel-0 slider-progress-section"
+                data-x="109"
+                data-y="395" 
+                data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                data-speed="500"
+                data-start="2900"
+                data-easing="Power3.easeInOut"
+                data-splitin="none"
+                data-splitout="none"
+                data-elementdelay="0.1"
+                data-endelementdelay="0.1"
+                data-linktoslide="next"
+                style="z-index: 5; max-width: auto; max-height: auto; white-space: nowrap;">
+                  <div class="progress-section"> <!--<img src="/static/main/images/funder_3.jpg" alt="Funder" class="funder-img" />-->
+                    <div class="pie_progress" role="progressbar" data-goal="75" data-barcolor="#ef6342" data-barsize="9.1" data-size="148" style="width:148px; margin:0px 106px; float: left;">
+                      <div class="pie_progress__number">0%</div>
+                      <div class="pie_progress__label">Completed</div>
+                    </div>
+                    <ul>
+                      <li>12<span>Days Left</span></li>
+                      <li>175<span>Backers</span></li>
+                      <li class="last">R$7.000,00<span>Funded</span></li>
+                    </ul>
+                    <div class="clear"></div>
+                  </div>
+                </div>
+                
+                <div class="tp-caption lft customout rs-parallaxlevel-0"
+          data-x="108"
+          data-y="395" 
+          data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+          data-speed="700"
+          data-start="2900"
+          data-easing="Power3.easeInOut"
+          data-elementdelay="0.1"
+          data-endelementdelay="0.1"
+          style="z-index: 6;"><img src="/static/main/images/dummy.png" alt="" data-lazyload="/static/main/images/funder_4.jpg"  class="funder-img"> </div>
+            </li>
+        
           </ul>
-        </div><!--/.navbar-collapse -->
-      </div>
-    </div>
-        
-    <header>
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-6">
-            <a href="index.html"><img src="/static/main/img/logo.svg" alt="Logo"></a>
-          </div>
-          <div class="col-xs-6 signin text-right navbar-nav">
-            <a href="#pricing" class="scroll">Pricing</a>&nbsp; &nbsp;
-            {% if not request.user.is_active %}
-            <a data-toggle="modal" data-target="#myModal" href="#">Sign in</a>&nbsp; &nbsp;
-            {% else %}
-            <a href="/dash">My dashboard</a>
-            {% endif %}
-          </div>
+          <div class="tp-bannertimer"></div>
         </div>
-        
-        <div class="row header-info">
-          <div class="col-sm-10 col-sm-offset-1 text-center">
-            <h1 class="wow fadeIn">A free landing page theme</h1>
-            <br />
-            <p class="lead wow fadeIn" data-wow-delay="0.5s">Lorem ipsum dolor sit amet, consectetur adipis. <br>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit sit dol mi arlna.</p>
-            <br />
-              
-            <div class="row">
-              <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
-                <div class="row">
-                  <div class="col-xs-6 text-right wow fadeInUp" data-wow-delay="1s">
-                    <a href="#be-the-first" class="btn btn-secondary btn-lg scroll">Learn More</a>
-                  </div>
-                  {% if messages %}
-	                  {% for message in messages %}
-					            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-					          {% endfor %}
-                  {% endif %}
-                  <div class="col-xs-6 text-left wow fadeInUp" data-wow-delay="1.4s">
-                    <a href="#invite" class="btn btn-primary btn-lg scroll">Request Invite</a>
-                  </div>
-                </div><!--End Button Row-->  
+      </div>
+    </article>
+  </section>
+  
+  <!-- Page Content -->
+  <section class="white">
+    <article class="container" id="intor-section">
+      <h3>Welcome to Fundz <br /> Its a crowdfunding Html5 theme</h3>
+      <ul>
+        <li class="text-area">
+          <span class="intro-icon"><i class="icon-ideas"></i></span>
+          <strong>Amazing Ideas <span class="line-green"></span></strong> Etiam porta sem malesuada mama rnolis euismod. Lorem osun.
+        </li>
+        <li class="plus-icon">&nbsp;</li>
+        <li class="text-area">
+          <span class="intro-icon"><i class="icon-community2"></i></span>
+          <strong>Community <span class="line-yellow"></span></strong> Etiam porta sem malesuada mama rnolis euismod. Lorem osun.
+        </li>
+        <li class="plus-icon">&nbsp;</li>
+        <li class="text-area">
+          <span class="intro-icon"><i class="icon-publicpower"></i></span>
+          <strong>Public Power <span class="line-red"></span></strong> Etiam porta sem malesuada mama rnolis euismod. Lorem osun.
+        </li>
+      </ul>
+    </article>
+  </section>
+  
+  <section class="gray">
+    <article class="container main" id="popular">
+      <h3>Popular at Fundz</h3>
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="popular-item">
+            <figure class="project-image">
+              <figcaption><a href="project-single.html">View Details</a></figcaption>
+              <img src="/static/main/images/popular_1.jpg" alt="img" />
+            </figure>
+            <div class="popular-content">
+              <div class="project-desc">
+                <h5><a href="#">Help us to save the nature  <span class="line-green"></span></a></h5>
+                <p>Pellentesque pharetra sapien non quam placerat vestibulum. Aliquam dignissim ex nec feugiat.</p>
               </div>
+              <div class="popular-data"> <img src="/static/main/images/funder_1.jpg" alt="Funder" />
+                <div class="pie_progress" role="progressbar" data-goal="75" data-barcolor="#34cc99" data-barsize="7.1">
+                  <div class="pie_progress__number">0%</div>
+                  <div class="pie_progress__label">Completed</div>
+                </div>
+              </div>
+              <div class="popular-details">
+                <ul>
+                  <li><strong>12</strong> Days Left</li>
+                  <li><strong>175</strong> Backers</li>
+                  <li class="last"><strong>R$7.000,00</strong> Funded</li>
+                </ul>
+              </div>
+              <div class="clear"></div>
             </div>
-            
           </div>
         </div>
-      </div>
-    </header>
-    
-    <div class="mouse-icon hidden-xs">
-				<div class="scroll"></div>
-			</div>
-    
-    <section id="be-the-first" class="pad-xl">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-8 col-sm-offset-2 text-center margin-30 wow fadeIn" data-wow-delay="0.6s">
-            <h2>Be the first</h2>
-            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipis.</p>
-          </div>
-        </div>
-        
-        <div class="iphone wow fadeInUp" data-wow-delay="1s">
-	        <img src="/static/main/img/iphone.png">
-        </div>
-      </div>
-    </section>
-    
-    <section id="main-info" class="pad-xl">
-	    <div class="container">
-		    <div class="row">
-			    <div class="col-sm-4 wow fadeIn" data-wow-delay="0.4s">
-				    <hr class="line purple">
-				    <h3>App Feature One Here</h3>
-				    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam viverra orci ut est facilisis, eu elementum mi volutpat. Pellentesque ac tristique nisi.</p>
-			    </div>
-			    <div class="col-sm-4 wow fadeIn" data-wow-delay="0.8s">
-				    <hr  class="line blue">
-				    <h3>App Feature One Here</h3>
-				    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam viverra orci ut est facilisis, eu elementum mi volutpat. Pellentesque ac tristique nisi.</p>
-			    </div>
-			    <div class="col-sm-4 wow fadeIn" data-wow-delay="1.2s">
-				    <hr  class="line yellow">
-				    <h3>App Feature One Here</h3>
-				    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam viverra orci ut est facilisis, eu elementum mi volutpat. Pellentesque ac tristique nisi.</p>
-			    </div>
-		    </div>
-	    </div>
-    </section>
-        
-        
-    <!--Pricing-->
-    <section id="pricing" class="pad-lg">
-      <div class="container">
-        <div class="row margin-40">
-          <div class="col-sm-8 col-sm-offset-2 text-center">
-            <h2 class="white">Pricing</h2>
-            <p class="white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam viverra orci ut.</p>
-          </div>
-        </div>
-        
-        <div class="row margin-50">
-          
-          <div class="col-sm-4 pricing-container wow fadeInUp" data-wow-delay="1s">
-            <br />
-            <ul class="list-unstyled pricing-table text-center">
-    					<li class="headline"><h5 class="white">Personal</h5></li>
-    					<li class="price"><div class="amount">$5<small>/m</small></div></li>
-    					<li class="info">2 row section for you package information. You can include all details or icons</li>
-    					<li class="features first">Up To 25 Projects</li>
-    					<li class="features">10GB Storage</li>
-    					<li class="features">Other info</li>
-    					<li class="features last btn btn-secondary btn-wide"><a href="#">Get Started</a></li>
-    				</ul>
-          </div>
-          
-          <div class="col-sm-4 pricing-container wow fadeInUp" data-wow-delay="0.4s">
-            <ul class="list-unstyled pricing-table active text-center">
-    					<li class="headline"><h5 class="white">Professional</h5></li>
-    					<li class="price"><div class="amount">$12<small>/m</small></div></li>
-    					<li class="info">2 row section for you package information. You can include all details or icons</li>
-    					<li class="features first">Up To 25 Projects</li>
-    					<li class="features">10GB Storage</li>
-    					<li class="features">Other info</li>
-    					<li class="features">Other info</li>
-    					<li class="features last btn btn-secondary btn-wide"><a href="#">Get Started</a></li>
-    				</ul>
-          </div>
-          
-          <div class="col-sm-4 pricing-container wow fadeInUp" data-wow-delay="1.3s">
-            <br />
-            <ul class="list-unstyled pricing-table text-center">
-    					<li class="headline"><h5 class="white">Business</h5></li>
-    					<li class="price"><div class="amount">$24<small>/m</small></div></li>
-    					<li class="info">2 row section for you package information. You can include all details or icons</li>
-    					<li class="features first">Up To 25 Projects</li>
-    					<li class="features">10GB Storage</li>
-    					<li class="features">Other info</li>
-    					<li class="features last btn btn-secondary btn-wide"><a href="#">Get Started</a></li>
-    				</ul>
-          </div>
-          
-        </div>
-        
-      </div>
-    </section>
-    
-    
-    <section id="invite" class="pad-lg light-gray-bg">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-8 col-sm-offset-2 text-center">
-            <i class="fa fa-envelope-o margin-40"></i>
-            <h2 class="black">Get the invite</h2>
-            <br />
-            <p class="black">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam viverra orci ut.</p>
-            <br />
-            
-            <div class="row">
-              <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
-                <form role="form">
-                  <div class="form-group">
-                    <input type="email" class="form-control-2" id="exampleInputEmail1" placeholder="Enter Email">
-                  </div>
-                  <button type="submit" class="btn btn-primary btn-lg">Request Invite</button>
-                </form>
+        <div class="col-lg-3">
+          <div class="popular-item">
+            <figure class="project-image">
+              <figcaption><a href="project-single.html">View Details</a></figcaption>
+              <img src="/static/main/images/popular_2.jpg" alt="img" />
+            </figure>
+            <div class="popular-content">
+              <div class="project-desc">
+                <h5><a href="#">Charity hospital <span class="line-yellow"></span></a></h5>
+                <p>Pellentesque pharetra sapien non quam placerat vestibulum. Aliquam dignissim ex nec feugiat.</p>
               </div>
-            </div><!--End Form row-->
-
+              <div class="popular-data"> <img src="/static/main/images/funder_2.jpg" alt="Funder" />
+                <div class="pie_progress" role="progressbar" data-goal="75" data-barcolor="#f2d031" data-barsize="7.1">
+                  <div class="pie_progress__number">0%</div>
+                  <div class="pie_progress__label">Completed</div>
+                </div>
+              </div>
+             <div class="popular-details">
+                <ul>
+                 <li><strong>12</strong> Days Left</li>
+                  <li><strong>175</strong> Backers</li>
+                  <li class="last"><strong>R$7.000,00</strong> Funded</li>
+                </ul>
+              </div>
+              <div class="clear"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="popular-item">
+            <figure class="project-image">
+              <figcaption><a href="project-single.html">View Details</a></figcaption>
+              <img src="/static/main/images/popular_3.jpg" alt="img" />
+            </figure>
+            <div class="popular-content">
+              <div class="project-desc">
+                <h5><a href="#">We Can Build Our Church <span class="line-blue"></span></a></h5>
+                <p>Pellentesque pharetra sapien non quam placerat vestibulum. Aliquam dignissim ex nec feugiat.</p>
+              </div>
+              <div class="popular-data"> <img src="/static/main/images/funder_3.jpg" alt="Funder" />
+                <div class="pie_progress" role="progressbar" data-goal="75" data-barcolor="#3298c9" data-barsize="7.1">
+                  <div class="pie_progress__number">0%</div>
+                  <div class="pie_progress__label">Completed</div>
+                </div>
+              </div>
+              <div class="popular-details">
+                <ul>
+                  <li><strong>12</strong> Days Left</li>
+                  <li><strong>175</strong> Backers</li>
+                  <li class="last"><strong>R$7.000,00</strong> Funded</li>
+                </ul>
+              </div>
+              <div class="clear"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="popular-item">
+            <figure class="project-image">
+              <figcaption><a href="project-single.html">View Details</a></figcaption>
+              <img src="/static/main/images/popular_4.jpg" alt="img" />
+            </figure>
+            <div class="popular-content">
+              <div class="project-desc">
+                <h5><a href="#">Flood affected people <span class="line-red"></span></a></h5>
+                <p>Pellentesque pharetra sapien non quam placerat vestibulum. Aliquam dignissim ex nec feugiat.</p>
+              </div>
+              <div class="popular-data"> <img src="/static/main/images/funder_4.jpg" alt="Funder" />
+                <div class="pie_progress" role="progressbar" data-goal="75" data-barcolor="#ef6342" data-barsize="7.1">
+                  <div class="pie_progress__number">0%</div>
+                  <div class="pie_progress__label">Completed</div>
+                </div>
+              </div>
+              <div class="popular-details">
+                <ul>
+                  <li><strong>12</strong> Days Left</li>
+                  <li><strong>175</strong> Backers</li>
+                  <li class="last"><strong>R$7.000,00</strong> Funded</li>
+                </ul>
+              </div>
+              <div class="clear"></div>
+            </div>
           </div>
         </div>
       </div>
-    </section>
-    
-    
-    <section id="press" class="pad-sm">
-      <div class="container">
-        
-        <div class="row margin-30 news-container">
-          <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 wow fadeInLeft" data-wow-delay="0.8s">
-            <a href="#" target="_blank">
-            <img class="news-img pull-left" src="/static/main/img/press-01.jpg" alt="Tech Crunch">
-            <p class="black">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam viverra orci ut.<br /> 
-            <small><em>Tech Crunch - January 15, 2015</em></small></p>
-            </a>
+      <div class="popular-btn green"> <a href="projects.html">See More</a> </div>
+    </article>
+  </section>
+  
+  <section class="parallax events singal">
+    <article class="container">
+      <h3>Upcoming Events</h3>
+      <div class="row upcoming-events">
+        <div class="col-lg-4">
+          <div class="green">
+            <h4>Fundraising Seminar <span></span></h4>
+            <p>Pellentesque pharetra sapien non quam placerat vestibulum. Aliquam dignissim ex nec feugiat condimentum.</p>
+            <span class="time-countdown" data-year="2018" data-month="3" data-day="17"></span>
           </div>
         </div>
-        
-        <div class="row margin-30 news-container">
-          <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 wow fadeInLeft" data-wow-delay="1.2s">
-            <a href="#" target="_blank">
-            <img class="news-img pull-left" src="/static/main/img/press-02.jpg" alt="Forbes">
-            <p class="black">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam viverra orci ut. <br /> 
-            <small><em>Forbes - Feb 25, 2015</em></small></p>
-            </a>
+        <div class="col-lg-4">
+          <div class="yellow">
+            <h4>Fundraising Seminar <span></span></h4>
+            <p>Pellentesque pharetra sapien non quam placerat vestibulum. Aliquam dignissim ex nec feugiat condimentum.</p>
+            <span class="time-countdown" data-year="2018" data-month="7" data-day="17"></span>
           </div>
         </div>
-        
+        <div class="col-lg-4">
+          <div class="red">
+            <h4>Fundraising Seminar <span></span></h4>
+            <p>Pellentesque pharetra sapien non quam placerat vestibulum. Aliquam dignissim ex nec feugiat condimentum.</p>
+            <span class="time-countdown" data-year="2018" data-month="5" data-day="17"></span>
+          </div>
+        </div>
       </div>
-    </section>
-    
-    
-    <footer>
-      <div class="container">
-        
-        <div class="row">
-          <div class="col-sm-8 margin-20">
-            <ul class="list-inline social">
-              <li>Connect with us on</li>
-              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-            </ul>
-          </div>
-          
-          <div class="col-sm-4 text-right">
-            <p><small>Copyright &copy; 2014. All rights reserved. <br>
-	            Created by <a href="http://visualsoldiers.com">Visual Soldiers</a></small></p>
-          </div>
-        </div>
-        
+    </article>
+  </section>
+  
+  <section class="white">
+    <article class="container" id="ourbakers">
+      <h3>Our Backers</h3>
+      <div class="logo-carousels">
+        <div class="slide"><img src="/static/main/images/1.png" alt="Our Backers"></div>
+        <div class="slide"><img src="/static/main/images/2.png" alt="Our Backers"></div>
+        <div class="slide"><img src="/static/main/images/3.png" alt="Our Backers"></div>
+        <div class="slide"><img src="/static/main/images/4.png" alt="Our Backers"></div>
+        <div class="slide"><img src="/static/main/images/5.png" alt="Our Backers"></div>
+        <div class="slide"><img src="/static/main/images/6.png" alt="Our Backers"></div>
+        <div class="slide"><img src="/static/main/images/7.png" alt="Our Backers"></div>
+        <div class="slide"><img src="/static/main/images/8.png" alt="Our Backers"></div>
       </div>
-    </footer>
-
-    <!-- Modal -->
-    {% load widget_tweaks %}
-	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-	  <div class="modal-dialog" role="document">
-	    <div class="modal-content">
-	      <div class="modal-header">
-	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-	        <h4 class="modal-title" id="myModalLabel">Register/Login</h4>
-	      </div>
-	      <div class="modal-body">
-	        <div>
-
-			  <!-- Nav tabs -->
-			  <ul class="nav nav-tabs" role="tablist">
-			    <li role="presentation" class="active"><a href="#register" aria-controls="register" role="tab" data-toggle="tab">Register</a></li>
-			    <li role="presentation"><a href="#login" aria-controls="login" role="tab" data-toggle="tab">Login</a></li>
-			  </ul>
-
-			  <!-- Tab panes -->
-			  <div class="tab-content">
-			    <div role="tabpanel" class="tab-pane active" id="register">
-			    	<br />
-			    	<form id="register-form" method="post">			    		
-			    		{% csrf_token %}
-			    		<div class="form-group">
-			    			<label>{{ register_form.username.label }}</label>
-					    	{{ register_form.username|add_class:"form-control" }}
-					    </div>	
-              <div class="form-group">
-                <label>{{ register_form.first_name.label }}</label>
-                {{ register_form.first_name|add_class:"form-control" }}
-              </div>  
-              <div class="form-group">
-                <label>{{ register_form.last_name.label }}</label>
-                {{ register_form.last_name|add_class:"form-control" }}
-              </div>  
-					    <div class="form-group">
-			    			<label>{{ register_form.email.label }}</label>
-					    	{{ register_form.email|add_class:"form-control" }}
-					    </div>	
-					    <div class="form-group">
-			    			<label>{{ register_form.password.label }}</label>
-					    	{{ register_form.password|add_class:"form-control" }}
-					    </div>	
-					    <div class="form-group">
-			    			<label>{{ register_form.password_again.label }}</label>
-					    	{{ register_form.password_again|add_class:"form-control" }}
-					    </div>					    
-					    <input type="submit" class="btn btn-primary" value="Register" />
-					</form>
-			    </div>
-			    <div role="tabpanel" class="tab-pane" id="login">
-             <br />
-              <form id="login-form" method="post">             
-                {% csrf_token %}
-                <div class="form-group">
-                  <label>{{ login_form.username.label }}</label>
-                  {{ login_form.username|add_class:"form-control" }}
-                </div>  
-                <div class="form-group">
-                  <label>{{ login_form.password.label }}</label>
-                  {{ login_form.password|add_class:"form-control" }}
-                </div>   
-                <input type="submit" class="btn btn-primary" value="Login" />
-          </div>
-			  </div>
-
-			</div>
-	      </div>
-	      <div class="modal-footer">
-	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-	        <button type="button" class="btn btn-primary">Save changes</button>
-	      </div>
-	    </div>
-	  </div>
-	</div>
-
-    
-    
-    <!-- Javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')</script>
-    <script src="/static/main/js/wow.min.js"></script>
-    <script src="/static/main/js/bootstrap.min.js"></script>
-    <script src="/static/main/js/main.js"></script>
-    <script src="/static/main/js/Helper.js?v=2"></script>
-    <script src="/static/main/js/Auth.js?v=2"></script>    
-    <script src="/static/main/js/OnReady.js?v=2"></script>
-   
-    </body>
-</html>
-
-
+    </article>
+  </section>
+  
+  <!-- <section class="map-container">
+    <div id="map-desc"><h3>Together. We transform more than 20 spaces!</h3></div>
+    <div id="projects-map"></div>
+  </section> -->
+  
+  <section class="send-us">
+    <article class="container">
+      <h3>Have a Community Project in Need of Funding?</h3>
+      <a href="start.html" class="btn btn-3 green">Send to us</a>
+    </article>
+  </section>
+{% include "main/snippets/footer.html" %}  

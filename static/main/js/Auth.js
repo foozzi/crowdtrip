@@ -1,22 +1,4 @@
 var Auth = {
-	register: function(form) {
-		$.ajax({
-			url: '/register',
-			data: form,
-			dataType: 'json',
-			type: 'POST',
-			success: function(data) {
-				// var res = $.parseJSON(data.errors)
-				console.log(data)
-				// if(res !== null) {
-				// 	for(var i = 0; res.length > i; i++) {
-				// 		console.log(res)
-				// 	}
-				// }
-			}
-		})
-		return false
-	},
 	login: function(form) {
 		$.ajax({
 			url: '/login',
@@ -24,13 +6,22 @@ var Auth = {
 			dataType: 'json',
 			type: 'POST',
 			success: function(data) {
-				var obj = $.parseJSON(data)
-				if(obj.errors !== null) {
-					for(var i = 0; obj.errors.length > i; i++) {
-
-					}
+				$('.dropdown-login').hide()
+				if(!data.success) {
+					swal({
+					  title: "Error!",
+					  text: "Invalid credentials or you account is not active, please check your email",
+					  type: "warning",
+					  confirmButtonText: "I'm try again"
+					});
+					$('.showSweetAlert .confirm').click(function(){
+						$('.dropdown-login').show()
+						return false
+					})
+				} else {
+					window.location.href = '/dashboard'
+					return false
 				}
-				console.log(obj)
 			}
 		})
 		return false

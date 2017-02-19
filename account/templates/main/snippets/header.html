@@ -1,0 +1,139 @@
+{% load staticfiles %}
+{% load widget_tweaks %}
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="author" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>CrowdTrip - Crowdfunding for travel projects</title> 
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" type="text/css" href="{% static '/main/css/bootstrap.min.css' %}">
+
+<!-- custom alert -->
+<link rel="stylesheet" type="text/css" href="{% static '/main/css/sweetalert.css' %}">
+
+<!-- Basic Stylesheets -->
+<link rel="stylesheet" type="text/css" href="{% static '/main/css/style.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static '/main/css/custom-style.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static '/main/css/responsive.css' %}">
+
+<!-- Progressbar CSS -->
+<link rel="stylesheet" href="{% static '/main/css/rainbow.css' %}">
+<link rel="stylesheet" href="{% static '/main/css/progress.css' %}">
+
+<!-- Revolution Slider CSS -->
+<link rel="stylesheet" type="text/css" href="{% static '/main/css/style.css' %}" media="screen" />
+<link rel="stylesheet" type="text/css" href="{% static '/main/css/settings.css' %}" media="screen" />
+
+<!-- Carousels CSS -->
+<link href="{% static '/main/css/jquery.bxslider.css' %}" rel="stylesheet" />
+
+<!-- Google Fonts & Font-Awesome -->
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:700,300,600,400" rel="stylesheet" type="text/css">
+<link type="text/css" rel="stylesheet" href="{% static '/main/css/font-awesome.min.css' %}" />
+<link type="text/css" rel="stylesheet" href="{% static '/main/css/icons.css' %}">
+
+<!-- Your Custom Styles -->
+<link rel="stylesheet" type="text/css" href="{% static '/main/css/my-styles.css' %}">
+
+<!-- HTML5 Shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body>
+<div class="wrapper"> 
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div id="logo">
+        <a href="index.html"><img src="/static/main/images/logo.png" alt="Fundz" /></a>
+        <button type="button" class="collapsed" id="navbar-toggle"><i class="icon fa fa-bars"></i></button>
+      </div>
+      <div class="nav-header-right">
+        <nav class="main-nav">
+          <ul>
+            <li><a href="about.html">About Us <span>what is fundz?</span></a></li>
+            <li><a href="projects.html">Explore <span>amazing ideas</span></a>
+              <ul>
+                <li><a href="projects.html">Projects - Sidebar</a></li>
+                <li><a href="projects-2.html">Projects - Full Width</a></li>
+                <li><a href="project-single.html">Projects Single</a></li>
+              </ul>
+            </li>
+            <li><a href="start.html">Start <span>send your idea</span></a></li>
+            <li><a href="#">Pages <span>demo pages</span></a>
+              <ul>
+                <li><a href="index.html">Home</a>
+                  <ul>
+                    <li><a href="index.html">Home Page 1</a></li>
+                    <li><a href="home-2.html">Home Page 2</a></li>
+                  </ul>
+                </li>
+                <li><a href="elements.html">Typography & Elements</a></li>
+                <li><a href="faqs.html">Faq's</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="blog-single.html">Blog Single</a></li>
+                <li><a href="single-page.html">Single Page</a></li>
+                <li><a href="404.html">404 Page</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <div class="header-right">
+          <div class="header-right-btns">
+            <ul>
+              {% if not request.user.is_active %}
+              <li class="login-panel">
+                <a href="#login">Login</a><span>Or</span>
+                <div class="dropdown-login">
+                  <div class="arrow"></div>
+                  <div class="reverse"></div>
+                  <div class="box-reverse left"></div>
+                  <div class="box-reverse right"></div>
+                  <form id="login-form">
+                    {% csrf_token %}
+                    <div class="form-group">
+                      <h3>Sign In</h3>
+                      <button class="btn btn-facebook"> <i class="fa fa-facebook"></i> &nbsp; Log in with Facebook </button>
+                      <hr>
+                      <img src="/static/main/images/or.png" alt="OR" />
+                      {% render_field login_form.username placeholder=register_form.username.label %}
+                      {% render_field login_form.password placeholder=register_form.password.label %}
+                    </div>
+                    <span class="text-gray remember"><input type="checkbox" id="remember" value=""> <label for="remember">Remember me</label></span>
+                    <button type="submit" class="btn btn-sigin">Sign me in!</button>
+                    <br style="clear:both;">
+                    <hr><br>
+                    <a class="link" href="#">Forgot password?</a><span class="text-gray"> - New to Fundz? </span> <a class="link" href="#">Sign up</a>
+                  </form>
+                </div>
+              </li>
+              <li><a href="#" class="btn btn-4 blue">Join</a></li>
+              {% else %}
+              <li>Hi! {{ request.user.first_name }} {{ request.user.last_name }}</li>
+              &nbsp;
+              <li><a href="#" class="btn btn-4 blue">Dashboard</a></li>
+              {% endif %}
+            </ul>
+          </div>
+          <div class="search-box border-right">
+            <form method="get" action="index.html">
+              <input type="text" value="Search Here" name="s" id="keyword">
+              <span class="icon fa fa-search transition-color" title="Search"></span>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>

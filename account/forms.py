@@ -2,7 +2,7 @@ from django import forms
 from .models import User
 
 class RegisterForm(forms.ModelForm):
-	username = forms.CharField(label='Your name', max_length=100, min_length=3)
+	username = forms.CharField(label='Your login', max_length=100, min_length=3)
 	first_name = forms.CharField(label='Your first name', max_length=100, min_length=3)
 	last_name = forms.CharField(label='Your last name', max_length=100, min_length=3)
 	email = forms.EmailField(label='Your email', max_length=100, min_length=5)
@@ -37,7 +37,7 @@ class RegisterForm(forms.ModelForm):
 			user.save()
 			return user.confirm_key, user
 
-class LoginForm(forms.ModelForm):
+class LoginForm(forms.Form):
 	username = forms.CharField(label='Your name', max_length=100, min_length=3)
 	password = forms.CharField(label='Your password', widget=forms.PasswordInput(), max_length=100, min_length=6)
 
