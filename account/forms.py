@@ -29,7 +29,7 @@ class RegisterForm(forms.ModelForm):
 		return self.cleaned_data
 
 	def save(self, commit=True):
-		user = super(RegisterForm, self).save(commit=False)
+		user = User.objects.get()
 		user.set_password(self.cleaned_data['password'])
 		user.confirm_key = User.generate_activation_key(self.cleaned_data['email'])
 		user.is_active = False

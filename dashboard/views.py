@@ -1,22 +1,31 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect, JsonResponse
+from django.contrib.auth.decorators import login_required
 
-from .forms import ProfileForm, AvatarForm
+from .forms import ProfileForm
 from account.models import User
 
+@login_required
 def index(request):
 	profile = User.objects.get(id=request.user.id)
 	form = ProfileForm(initial={profile})
-	form_avatar = AvatarForm()
 	return render(request, 'dashboard/profile.html', 
-							{'profile_form':form, 'avatar_form': form_avatar})
+							{'profile_form':form})
 
-def avatar_upload(self):
-	if request.method == 'POST':
-		form = AvatarForm(request.FILES)
+@login_required
+def avatar_upload(request):
+	if request.method == 'POST':	
+		form = ProfileForm(request.FILES)		
 		if form.is_valid():
-			handle_uploaded_file(request.FILES['file'])
+			profile = User.objects.get(id=request.user.id)
+			profile.uploadfile = request.FILES['uploadfile']
+			profile.save()
 			return JsonResponse({
 				'errors':None,
 				'success':True
+			})
+		else :
+			return JsonResponse({
+				'errors':form.errors,
+				'success':False
 			})

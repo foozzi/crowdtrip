@@ -1,10 +1,12 @@
 from django.contrib.auth.models import (AbstractBaseUser, PermissionsMixin,
 										BaseUserManager)
 from django.db import models
+from django.conf import settings
 from django.utils import timezone
 from django.utils.crypto import get_random_string
 
 import hashlib
+from PIL import Image
 
 class UserAccountManager(BaseUserManager):
 
@@ -34,6 +36,7 @@ class User(AbstractBaseUser, PermissionsMixin):
 	username = models.CharField(max_length=30, unique=True)
 	first_name = models.CharField(max_length=100)
 	last_name = models.CharField(max_length=100)
+	uploadfile = models.ImageField(upload_to=settings.AVATAR_UPLOAD_DIR + '/%Y/%m/%d', blank=True)
 	email = models.EmailField(max_length=254, unique=True)
 	is_staff = models.BooleanField(default=False)
 	is_active = models.BooleanField(default=True)

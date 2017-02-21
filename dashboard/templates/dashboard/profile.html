@@ -7,9 +7,9 @@
     <article>
       <div class="container">
         <form id="avatar-form">
-          {% render_field avatar_form.file %}
-          <h1 class="avatar"><img src="https://avatars0.githubusercontent.com/u/1178208?v=3&u=872275ce99a47ee7ac389ed229b87792b102a3fb&s=140"></h1>
-          }
+          {% csrf_token %}
+          <h1 class="avatar"><img id="avatar-change" src="https://avatars0.githubusercontent.com/u/1178208?v=3&u=872275ce99a47ee7ac389ed229b87792b102a3fb&s=140"></h1>
+          
         </form>
       </div>
     </article>

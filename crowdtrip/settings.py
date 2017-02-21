@@ -33,7 +33,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 UPLOAD_DIR = os.path.join(BASE_DIR, 'uploads')
 
-AVATAR_UPLOAD_DIR = UPLOAD_DIR + 'avatar'
+AVATAR_UPLOAD_DIR = UPLOAD_DIR + '/avatar'
 
 # Application definition
 

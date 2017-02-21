@@ -10,3 +10,6 @@ h1.avatar {
 h1.avatar img {
 	border-radius: 70px;
 }
+#avatar-change:hover {
+	opacity: 0.6;
+}
