@@ -1,7 +1,8 @@
 from django import forms
 from .models import Profile
+from account.models import User
 
-class Profile(forms.Form):
+class ProfileForm(forms.Form):
 	username = forms.CharField(label='Your login', max_length=100, min_length=3)
 	first_name = forms.CharField(label='Your first name', max_length=100, min_length=3)
 	last_name = forms.CharField(label='Your last name', max_length=100, min_length=3)
@@ -27,3 +28,9 @@ class Profile(forms.Form):
 			raise forms.ValidationError('email existing, please login', code='email')
 			
 		return self.cleaned_data
+
+class AvatarForm(forms.Form):
+   	file = forms.FileField()
+
+   	def clean(self):
+   		"""todo"""

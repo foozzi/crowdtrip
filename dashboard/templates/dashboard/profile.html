@@ -6,7 +6,11 @@
   <section class="header-bottom">
     <article>
       <div class="container">
-        <h1 class="avatar"><img src="https://avatars0.githubusercontent.com/u/1178208?v=3&u=872275ce99a47ee7ac389ed229b87792b102a3fb&s=140"></h1>
+        <form id="avatar-form">
+          {% render_field avatar_form.file %}
+          <h1 class="avatar"><img src="https://avatars0.githubusercontent.com/u/1178208?v=3&u=872275ce99a47ee7ac389ed229b87792b102a3fb&s=140"></h1>
+          }
+        </form>
       </div>
     </article>
   </section>
@@ -37,33 +41,27 @@
             <form class="form-ui" method="post">
               {% csrf_token %}
               <div id="basic-data" class="form-wizard active">
-                          
+             
                 <div class="form-group">
                   <div class="form-left">
-                    {% render_field register_form.username class="form-control" placeholder=register_form.username.label %}
                   </div>
                   <div class="form-right">
-                    {% render_field register_form.email class="form-control" placeholder=register_form.email.label %}
                   </div>
                   <div class="clear"></div>
                 </div>
                 
                 <div class="form-group">
                   <div class="form-left">
-                    {% render_field register_form.first_name class="form-control" placeholder=register_form.first_name.label %}
                   </div>
                   <div class="form-right">
-                    {% render_field register_form.last_name class="form-control" placeholder=register_form.last_name.label %}
                   </div>
                   <div class="clear"></div>
                 </div>
 
                 <div class="form-group">
                   <div class="form-left">
-                    {% render_field register_form.password class="form-control" placeholder=register_form.password.label %}
                   </div>
                   <div class="form-right">
-                    {% render_field register_form.password_again class="form-control" placeholder=register_form.password_again.label %}
                   </div>
                   <div class="clear"></div>
                 </div>
