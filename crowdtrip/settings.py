@@ -31,9 +31,11 @@ LOGIN_REDIRECT_URL = '/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-UPLOAD_DIR = os.path.join(BASE_DIR, 'uploads')
+MEDIA_ROOT = os.path.join('uploads')
 
-AVATAR_UPLOAD_DIR = UPLOAD_DIR + '/avatar'
+MEDIA_URL = '/'
+
+AVATAR_UPLOAD_DIR = MEDIA_ROOT + '/avatar'
 
 # Application definition
 
@@ -83,6 +85,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.media'
             ],
         },
     },

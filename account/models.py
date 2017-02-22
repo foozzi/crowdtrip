@@ -36,12 +36,13 @@ class User(AbstractBaseUser, PermissionsMixin):
 	username = models.CharField(max_length=30, unique=True)
 	first_name = models.CharField(max_length=100)
 	last_name = models.CharField(max_length=100)
-	uploadfile = models.ImageField(upload_to=settings.AVATAR_UPLOAD_DIR + '/%Y/%m/%d', blank=True)
+	avatar = models.ImageField(upload_to=settings.AVATAR_UPLOAD_DIR + '/%Y/%m/%d', default = '/static/main/images/no_avatar.jpg', blank=True)
 	email = models.EmailField(max_length=254, unique=True)
 	is_staff = models.BooleanField(default=False)
 	is_active = models.BooleanField(default=True)
 	date_joined = models.DateTimeField(default=timezone.now)
 	confirm_key = models.CharField(max_length=254, unique=True)
+	bio = models.TextField(max_length=2000)
 
 	USERNAME_FIELD = 'username'
 	REQUIRED_FIELDS = ['email']

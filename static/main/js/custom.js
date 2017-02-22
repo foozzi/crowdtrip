@@ -710,27 +710,27 @@ jQuery(document).ready(function($){
 	/***********************************************************
 	Start Project PlaceHolder & Values on focus and blur
 	************************************************************/
-	$('.start-content form input[type="text"], .start-content form textarea, .form-ui input[type="text"], .form-ui textarea').each(function() {
-		var inputValue = $(this).attr('placeholder');
-		var input = $(this);
-		$(this).val(inputValue);
-	});
+	// $('.start-content form input[type="text"], .start-content form textarea, .form-ui input[type="text"], .form-ui textarea').each(function() {
+	// 	var inputValue = $(this).attr('placeholder');
+	// 	var input = $(this);
+	// 	$(this).val(inputValue);
+	// });
 	
-	$(document).on('focus', '.start-content form input[type="text"], .start-content form textarea, .form-ui input[type="text"], .form-ui textarea', function(e) {
-		var inputValue = $(this).attr('placeholder');
-		if($(this).val()==inputValue)
-		{
-			$(this).val('');
-		}
-	});
+	// $(document).on('focus', '.start-content form input[type="text"], .start-content form textarea, .form-ui input[type="text"], .form-ui textarea', function(e) {
+	// 	var inputValue = $(this).attr('placeholder');
+	// 	if($(this).val()==inputValue)
+	// 	{
+	// 		$(this).val('');
+	// 	}
+	// });
 	
-	$(document).on('blur', '.start-content form input[type="text"], .start-content form textarea, .form-ui input[type="text"], .form-ui textarea', function(e) {
-		var inputValue = $(this).attr('placeholder');
-		if($(this).val()=='')
-		{
-			$(this).val(inputValue);
-		}
-	});
+	// $(document).on('blur', '.start-content form input[type="text"], .start-content form textarea, .form-ui input[type="text"], .form-ui textarea', function(e) {
+	// 	var inputValue = $(this).attr('placeholder');
+	// 	if($(this).val()=='')
+	// 	{
+	// 		$(this).val(inputValue);
+	// 	}
+	// });
 	
 	
 	/***********************************************************

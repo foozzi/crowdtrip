@@ -3,7 +3,7 @@ $(document).ready(function(){
 		var uploader = new ss.SimpleUpload({
 	        button: '#avatar-change',
 	        url: '/dashboard/avatar_upload',
-	        name: 'uploadfile',
+	        name: 'avatar',
 	        multipart: true,
 	        hoverClass: 'hover',
 	        focusClass: 'focus',
@@ -16,10 +16,12 @@ $(document).ready(function(){
 	        },
 	        onSubmit: function() {
 	            // msgBox.innerHTML = ''; // empty the message box
-	            $('#avatar-change').innerHTML = 'Uploading...'; // change button text to "Uploading..."
+	            // $('#avatar-change').innerHTML = 'Uploading...'; // change button text to "Uploading..."
 	          },
 	        onComplete: function( filename, response ) {
-	            $('#avatar-change').innerHTML = 'Choose Another File';
+	            // $('#avatar-change').innerHTML = 'Choose Another File';
+	            location.reload()
+	            return false
 	            // progressOuter.style.display = 'none'; // hide progress bar when upload is completed
 	            // if ( !response ) {
 	            //     msgBox.innerHTML = 'Unable to upload file';
