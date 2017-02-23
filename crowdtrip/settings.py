@@ -33,7 +33,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_ROOT = os.path.join('uploads')
 
-MEDIA_URL = '/'
+MEDIA_URL = '/media/'
 
 AVATAR_UPLOAD_DIR = MEDIA_ROOT + '/avatar'
 
