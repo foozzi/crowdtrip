@@ -37,9 +37,13 @@ MEDIA_URL = '/media/'
 
 AVATAR_UPLOAD_DIR = MEDIA_ROOT + '/avatar'
 
+PROJECT_UPLOAD_DIR = MEDIA_ROOT + '/project'
+
 # Application definition
 
 INSTALLED_APPS = [
+    'helper.apps.HelperConfig',
+    'project.apps.ProjectConfig',
     'account.apps.AccountConfig',
     'dashboard.apps.DashboardConfig',
     'django.contrib.admin',

@@ -19,8 +19,9 @@ from django.conf import settings
 from django.contrib import admin
 
 urlpatterns = [
-	url(r'', include('account.urls')),
-	url(r'', include('dashboard.urls')),
+	url(r'', include('account.urls')),    
+	url(r'', include('dashboard.urls')),    
+    url(r'', include('project.urls')),
     url(r'^admin/', admin.site.urls),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

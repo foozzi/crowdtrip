@@ -8,8 +8,6 @@ from django.contrib import messages
 from .forms import ProfileForm, ProfileAvatarForm
 from account.models import User
 
-import os
-
 @login_required
 def index(request):
 	user = User.objects.get(id=request.user.id)
