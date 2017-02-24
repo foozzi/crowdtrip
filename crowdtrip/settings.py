@@ -35,9 +35,9 @@ MEDIA_ROOT = os.path.join('uploads')
 
 MEDIA_URL = '/media/'
 
-AVATAR_UPLOAD_DIR = MEDIA_ROOT + '/avatar'
+AVATAR_UPLOAD_DIR = 'avatar/'
 
-PROJECT_UPLOAD_DIR = MEDIA_ROOT + '/project'
+PROJECT_UPLOAD_DIR = 'project/'
 
 # Application definition
 

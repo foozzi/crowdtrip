@@ -38,6 +38,11 @@
       </ul>
     </div>
     <hr>
+     {% if messages %}
+                     {% for message in messages %}
+                       <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                     {% endfor %}
+                   {% endif %}
     <div class="start-content">
       <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
@@ -178,7 +183,7 @@
           <div id="video-inputs" class="imgORvid">
             <div class="form-group">
               <div class="form-left" style="width:100%;">
-                <input type="text" value="" class="form-control" placeholder="Youtube or Vimeo Link" name="title">
+                <input type="text" value="" class="form-control" placeholder="Youtube or Vimeo Link" name="video">
               </div>
               <div class="clear"></div>
             </div>

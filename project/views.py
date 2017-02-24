@@ -12,13 +12,13 @@ from .forms import ProjectCreateForm
 @login_required
 def create(request):
 	if request.method == 'POST':		
+	
 		form = ProjectCreateForm(request.POST, request.FILES)		
 		if form.is_valid():			
 			res = form.save()
 			return HttpResponseRedirect('/project/create')
 		else:
 			for err in form.errors:
-				print(err)
 				messages.warning(request, form.errors[err])
 			return HttpResponseRedirect('/project/create')
 	else:
