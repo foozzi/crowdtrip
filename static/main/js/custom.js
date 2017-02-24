@@ -810,6 +810,16 @@ Add More Perks
 
 function addperk()
 {
+	var countPerks = $('.moreperks').length
+	if(countPerks >= 3) {
+		swal({
+		  	title: "Info!",
+		  	text: "No more 5 perks per project",
+		  	type: "info",
+		  	confirmButtonText: "Okay"
+		});
+		return false;
+	}	
 	var perkelEments = $("#perk-elements").html();
 	$("#add-more-perks").append("<div class='moreperks'>"+perkelEments+"</div>");
 }
