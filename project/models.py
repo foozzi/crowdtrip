@@ -24,3 +24,17 @@ class Project(models.Model):
 
 	def __str__(self):
 		return self.title
+
+class Perks(models.Model):
+    name = models.CharField(max_length=254)
+    contrib_amount = models.IntegerField()
+    available = models.IntegerField()
+    delivery_date = models.DateTimeField(default=None)
+    description = models.TextField(max_length=10000)
+    
+    class Meta:
+        verbose_name = 'perk'
+        verbose_name_plural = 'perks'
+        
+    def __str__(self):
+        return self.name

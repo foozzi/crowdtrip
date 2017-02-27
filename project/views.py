@@ -7,15 +7,16 @@ from django.contrib import messages
 
 from helper.models import Categories
 
-from .forms import ProjectCreateForm
+from .forms import ProjectCreateForm, ProjectPerksForm
 
 @login_required
 def create(request):
 	if request.method == 'POST':		
-	
-		form = ProjectCreateForm(request.POST, request.FILES)		
+		print(request.POST)
+		form = ProjectCreateForm(request.POST, request.FILES)
 		if form.is_valid():			
 			res = form.save()
+		
 			return HttpResponseRedirect('/project/create')
 		else:
 			for err in form.errors:
